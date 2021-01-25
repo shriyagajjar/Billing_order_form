@@ -66,7 +66,7 @@ namespace Billing_order_form
             request.AddParameter("application/json", Tempdata, ParameterType.RequestBody);
 
             //Execution
-            IRestResponse response = client.Execute(request);
+            return = client.Execute(request);
         }
         public IRestResponse Get()
         {
@@ -80,7 +80,7 @@ namespace Billing_order_form
             request.AddHeader("Content-Type", "application/json");
 
             //Execution
-            IRestResponse response = client.Execute(request);
+            return client.Execute(request);
         }/*
         public IRestResponse Getonerecord(string id)
         {
@@ -110,7 +110,7 @@ namespace Billing_order_form
             request.AddHeader("Content-Type", "application/json");
 
             //Execution
-            IRestResponse response = client.Execute(request);
+            return client.Execute(request);
         }
 
     }

@@ -63,12 +63,20 @@ namespace Billing_order_form
 
 
             //close 
+            driver.Navigate().GoToUrl("http://qaauto.co.nz/test-blank-form/");
 
+            driver.FindElement(By.Id("wpforms-locked-16-field_form_locker_password")).SendKeys("Testing");
+            driver.FindElement(By.Name("wpforms[submit]")).Click();
 
+            driver.FindElement(By.Id("wpforms-16-field_0")).SendKeys("SHRI");
+            driver.FindElement(By.Id("wpforms-16-field_0-last")).SendKeys("GAJJAR");
 
+            //email
+            driver.FindElement(By.Id("wpforms-16-field_1")).SendKeys("SHRI@gmail.com");
 
+            driver.FindElement(By.Id("wpforms-16-field_2")).SendKeys("asdfvgbhnjmkjh");
 
-
+            driver.FindElement(By.Name("wpforms[submit]")).Click();
         }
     }
 }
